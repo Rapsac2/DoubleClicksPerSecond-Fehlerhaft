@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "doubleclickspersecond",
+	"version": "${version}",
+	"name": "DoubleClicksPerSecond",
+	"description": "Shows cps and doubleclicks in game",
+	"authors": [
+		"Rapsac"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.DoubleClicksPerSecond.DoubleClicksPerSecond"
+		],
+		"client": [
+			"com.DoubleClicksPerSecond.DoubleClicksPerSecondClient"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
